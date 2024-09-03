@@ -1,92 +1,68 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-	<form action="/submit" method="post">
-		<table>
-			<tr>
-				<td>
-					Name
-				</td>
-				<td>
-					<input type="text" placeholder="Name" name="">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Email
-				</td>
-				<td>
-					<input type="text" placeholder="Email" name="">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Gender
-				</td>
-				<td>
-					<input type="radio" name="gender" size=""> Male
-					<input type="radio" name="gender" size=""> Feale
-					
-				</td>
-			</tr>
-			<tr><td>Car Brands</td>
-				<td><select name="cars">
-					<option name="">--Please choose an option--</option>
-					<option name="">HondaCity</option>
-					<option name="">Hyundai verna</option>
-					
-				</select></td>
-			</tr>
-			<tr>
-				<td>
-					Age
-				</td>
-				<td>
-					<input type="number" placeholder="Age" name="">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					DOB
-				</td>
-				<td>
-					<input type ="date" 
-				</td>
-			</tr>
-			<tr><td>Phone Number</td>
-			<td><input type="tel" placeholder="xxx-xxx-xxxx" name=""></td>
-			</tr>
-			<tr>
-				<td>Password</td>
-				<td><input type="Password" placeholder="Password" name=""></td>
-			</tr>
-			  <tr>
-                <td></td>
-                <td>
-                    <input type="checkbox" id="tos" name="">
-                    <label for="tos">I agree to the TOS</label>
-                </td>
-            </tr>
+    <h1>Signup Form</h1>
+    <form action="/submit" method="post">
+        <!-- Name Field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Name" required>
+        <br><br>
 
-            <!-- Row for Submit Button -->
-            <tr>
-                <td></td>
-                <td>
-                    <button type="submit">Submit</button>
-                </td>
-            </tr>
-		</table>
-	</form>
-    <script type="text/javascript" src="./script.js">
-</script>
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <br><br>
 
+        <!-- Gender Field -->
+        <label>Gender:</label>
+        <input type="radio" id="gender_m" name="gender" value="male" required>
+        <label for="gender_m">Male</label>
+        <input type="radio" id="gender_f" name="gender" value="female" required>
+        <label for="gender_f">Female</label>
+        <br><br>
+
+        <!-- Car Brands Field -->
+        <label for="cars">Car Brands:</label>
+        <select id="cars" name="cars" required>
+            <option value="" disabled selected>--Please choose an option--</option>
+            <option value="toyota">Toyota</option>
+            <option value="ford">Ford</option>
+            <option value="honda">Honda</option>
+        </select>
+        <br><br>
+
+        <!-- Age Field -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Age" required>
+        <br><br>
+
+        <!-- Date of Birth Field -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <br><br>
+
+        <!-- Phone Number Field -->
+        <label for="tel">Phone Number:</label>
+        <input type="tel" id="tel" name="tel" placeholder="xxx-xxx-xxxx">
+        <br><br>
+
+        <!-- Password Field -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <br><br>
+
+        <!-- Terms of Service Checkbox -->
+        <input type="checkbox" id="tos" name="tos" required>
+        <label for="tos">I agree to the TOS</label>
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
 </body>
-
 </html>
